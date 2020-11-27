@@ -1,0 +1,14 @@
+<mat-card *ngIf="computer">
+  <mat-card-title>
+    <h3> {{ computer.name | uppercase }}</h3>
+  </mat-card-title>
+
+  <mat-card-content>
+    <img src="{{ baseURL + computer.image }}" alt="{{ computer.name }}">
+    <p>Description: {{ computer.description }}</p>
+    <p>Price: {{ computer.price }}</p>
+  </mat-card-content>
+</mat-card>
+<div *ngIf="errMsg">
+  <p>{{ errMsg }}</p>
+</div>

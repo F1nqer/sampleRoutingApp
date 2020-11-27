@@ -1,0 +1,9 @@
+<h3>Computer list</h3>
+<div *ngIf="computers">
+  <a *ngFor="let computer of computers" [routerLink]="['/computerDetail', computer.id]">
+    <h3>{{ computer.name }}</h3>
+  </a>
+</div>
+<div *ngIf="errMsg">
+  <p>{{ errMsg }}</p>
+</div>
